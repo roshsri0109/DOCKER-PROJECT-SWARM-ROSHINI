@@ -1,18 +1,24 @@
 version: "3.8"
+
 services:
+
   azure:
     image: roshsri0109/azure
     ports:
-      - 82:80
-    deploy: replicas:3
+      - "82:80"
+    deploy:
+      replicas: 3
+
   gcp:
     image: roshsri0109/gcp
     ports:
-      - 83:80
-    deploy: null
-    replicas: 3
-terraform:
-  image: roshsri0109/terraform
-  ports:
-    - 84:80
-  deploy: replicas:3
+      - "83:80"
+    deploy:
+      replicas: 3
+
+  terraform:
+    image: roshsri0109/terraform
+    ports:
+      - "84:80"
+    deploy:
+      replicas: 3
